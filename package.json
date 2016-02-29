@@ -1,0 +1,22 @@
+{
+  "name": "todoscontraoaedesaegypti.ensinarteditora.com.br",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilivro/todoscontraoaedesaegypti.ensinarteditora.com.br.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilivro/todoscontraoaedesaegypti.ensinarteditora.com.br/issues"
+  },
+  "homepage": "https://github.com/wilivro/todoscontraoaedesaegypti.ensinarteditora.com.br#readme",
+  "devDependencies": {
+    "cursos": "github:wilivro/cursos#baea0f1"
+  }
+}
