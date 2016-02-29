@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <title>Lição 10 Peça 02</title>
+    <meta charset="utf-8">
+    <script src="../wilib/js/lib/require.js"></script>
+    <script src="../wilib/js/app.js"></script>
+    <link rel="stylesheet" href="../wilib/css/font-awesome.css">
+    <link rel="stylesheet" href="../wilib/css/estilo.css">
+
+    <script>
+require(['../wilib/js/lib/apresentacao'], function (edi) {
+
+  edi.setConfig({
+    icone: 'exclamacao',
+    titulo: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+  });
+
+  var reflita = {
+    titulo: '<span style="font-size: 40px;">Reflita</span>',
+    texto: '<span class="bold">Nesta lição aprenderemos sobre alguns recursos que têm o propósito de facilitar o dia a dia das pessoas, fornecendo-lhes as mais diversas funcionalidades com infinitas possibilidades: os aplicativos móveis.<br><br>Além disso, abordaremos alguns recursos do Google, os livros virtuais (e-books) e também um setor que está cada vez mais em alta: a compra e venda pela internet.<br><br>Boa aula!</span>',
+    config: {
+      roxo: true
+    }
+  };
+
+  edi.apresentacao(reflita.titulo, reflita.texto, reflita.config);
+});
+window.onload = function() {
+  parent = {
+    bloqueio: function() {},
+    seguir: function() {
+      document.location = document.URL.replace('todos_3', 'todos_4').split('?')[0];
+    }
+  }
+};
+    </script>
+  </head>
+
+  <body>
+
+  </body>
+</html>

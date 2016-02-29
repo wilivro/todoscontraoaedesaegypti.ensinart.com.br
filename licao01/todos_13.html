@@ -1,0 +1,205 @@
+<!-- Desenvolvedor: Rodolfo Araújo-->
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <title>Lição 01 Peça 31</title>
+    <meta charset="utf-8">
+    <script src="../wilib/js/lib/require.js"></script>
+    <script src="../wilib/js/app.js"></script>
+    <link rel="stylesheet" href="../wilib/css/font-awesome.css">
+    <link rel="stylesheet" href="../wilib/css/estilo.css">
+
+    <script>
+require(['../wilib/js/lib/alternativa_botao'], function (edi) {
+
+  edi.setConfig({
+    titulo: 'Leia com atenção cada situação a <br> seguir e selecione a atitude correta a ser tomada.',
+    qtdTelas: 1
+  });
+
+  if (edi.telaAtual == 1) {
+    var texto = 'Você está doente, com suspeita de dengue. O que você deve fazer?';
+
+    var btns = [
+    {texto: 'Ficar totalmente isolado para não transmitir a doença a outras pessoas. ', dataCorreta: false},
+    {texto: 'Ir ao hospital ou posto de saúde para buscar orientação médica, ficar de repouso e beber bastante líquido.', dataCorreta: true}
+    ];
+  }
+
+  if (edi.telaAtual == 2) {
+    var texto = 'Você acaba de ver um vaso com água em sua casa com várias larvas do mosquito. O que você deve fazer?';
+
+    var btns = [
+    {texto: 'Jogar as larvas na terra seca do jardim ou chamar algum adulto para colocar água sanitária na quantidade correta para matar as larvas e depois lavar o vaso.', dataCorreta: true},
+    {texto: 'Jogar um pouco de terra do jardim no vaso com água ou colocar o vaso com as larvas em um local sombreado.', dataCorreta: false}
+    ];
+  }
+
+  if (edi.telaAtual == 3) {
+    var texto = 'Você e sua família vão viajar nas férias por uma semana. Antes de partir, o que vocês devem fazer?';
+
+    var btns = [
+    {texto: 'Verificar toda a casa retirando os objetos da área externa que podem acumular água, deixar os ralos e os vasos sanitários fechados.', dataCorreta: true},
+    {texto: 'Fechar bem as janelas para evitar que os mosquitos entrem na casa e passar repelente nos móveis da casa.', dataCorreta: false}
+    ];
+  }
+
+  if (edi.telaAtual == 4) {
+    var texto = 'A casa vizinha à sua está fechada à venda há meses, nela existe uma piscina vazia e descoberta. O que você deve fazer?';
+
+    var btns = [
+    {texto: 'Pular o muro da casa do vizinho e cobrir a piscina com a ajuda de um colega.', dataCorreta: false},
+    {texto: 'Pedir para os seus pais entrarem em contato com o responsável da casa para fazer uma limpeza e cobrir a piscina adequadamente.', dataCorreta: true}
+    ];
+  }
+
+  var config = {
+    randomico: true,
+    width: 280,
+    height: 20,
+    left: 430,
+    top: 140,
+    tamanhoTexto: 16,
+    colunas: 1,
+    margin: '0 0 10px 0',
+    padding: 5,
+    display: 'block',
+    randomico: false,
+    btnBranco: true,
+    animacao: true
+  };
+
+  function callback(a, b) {
+
+    if (a) {
+      $('#msgAcerto').fadeIn();
+    } else {
+      $('#msgErrado').fadeIn();
+    }
+  }
+
+  edi.alternativa_botao(btns, callback, function(a) {
+    //
+  }, config);
+
+  $('.texto').find('p').html(texto);
+  $('#ico').iconeInterrogacaoAzul(true);
+
+});
+window.onload = function() {
+  parent = {
+    bloqueio: function() {},
+    seguir: function() {
+      document.location = document.URL.replace('todos_13', 'todos_14').split('?')[0];
+    }
+  }
+};
+    </script>
+
+    <style>
+#conteudo {
+  background: radial-gradient(#fff, #eee);
+  height: 315px;
+}
+
+        .texto {
+          background: #fff;
+          width: 300px;
+          height: 268px;
+          padding: 0 20px;
+          position: absolute;
+          left: 20px;
+          top: 85px;
+          border-radius: 5px;
+          border: 1px solid #E2E2E2;
+          color: #666;
+        }
+
+        .texto p {
+          margin: 10px 120px 0 0;
+          font-size: 14px;
+          text-align: center;
+          line-height: 1.3;
+        }
+
+        .btn-sem-estilo {
+          box-shadow: 0 0 0 0;
+        }
+
+
+        #ico {
+          position: absolute;
+          left: 414px;
+          top: 70px;
+        }
+
+        #img {
+          position: absolute;
+          width: 120px;
+          height: 140px;
+          background-image: url(../img/licao01/p21.png);
+          background-repeat: no-repeat;
+          left: 228px;
+          top: 100px;
+        }
+
+        #pergunta {
+          position: absolute;
+          width: 250px;
+          height: 25px;
+          left: 488px;
+          top: 90px;
+          color: #666;
+        }
+
+        #msgAcerto {
+          width: 300px;
+          height: 100px;
+          position: absolute;
+          left: 35px;
+          top: 245px;
+          padding: 3px;
+          font-size: 12px;
+          text-align: center;
+          font-weight: bold;
+          line-height: 16px;              
+          color: #9c0;
+          display: none;
+        }
+
+        #msgErrado {
+          width: 300px;
+          height: 100px;
+          position: absolute;
+          left: 35px;
+          top: 255px;
+          padding: 3px;
+          font-size: 12px;
+          text-align: center;
+          font-weight: bold;
+          line-height: 16px;              
+          color: #F00;
+          display: none;
+        }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="texto">
+      <p></p>
+    </div>
+    <span id="ico"></span>
+    <div id="img"></div>
+    <div id="pergunta">Como se chama este dispositivo?</div>
+
+    <div id="msgAcerto" class="arredondado">
+      <p>Muito bem. Você acertou. O sistema de trabalho dele é bastante fácil, pois, na medida em que ele é movimentado sobre uma superfície horizontal, você verificará que ele também moverá o CURSOR, uma setinha que aparece na tela do computador.</p>
+    </div>
+
+    <div id="msgErrado" class="arredondado">
+      <p>Tente novamente. O dispositivo de apontamento é composto por uma pequena caixa e por meio do cursor (seta que aparece na tela do computador) movimenta-se ao comando de quem o manipula.</p>
+    </div>
+
+  </body>
+</html>
