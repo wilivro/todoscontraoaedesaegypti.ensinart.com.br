@@ -15,6 +15,7 @@ require(['../wilib/js/lib/alternativa_botao_asterisco'], function (edi) {
   edi.setConfig({// configurando o EDI
     icone: '',
     sexo: "M",
+    tempoFinal: 5,
     titulo: 'Leia cada explicação a seguir e, de acordo com seus <br> conhecimentos, selecione a alternativa correta.',
     qtdTelas: 4//Se for multi tela, colcoar o valor do length do array 
   });
@@ -22,6 +23,8 @@ require(['../wilib/js/lib/alternativa_botao_asterisco'], function (edi) {
   var config = {
     top: 280,
     left: 75,
+    lineHeight: '18px',
+    textAlign: 'justify',
     topTexto: 120,
     leftTexto: 80,
   };
@@ -44,7 +47,7 @@ require(['../wilib/js/lib/alternativa_botao_asterisco'], function (edi) {
     [
     {texto: 'Apenas a frase A está correta.', dataCorreta: false},
     {texto: 'Apenas a frase B está correta.', dataCorreta: false},
-    {texto: 'As duas frases estão corretas.', dataCorreta: true}
+    {texto: 'As duas frases estão incorretas.', dataCorreta: true}
     ],
     [
     {texto: 'Apenas a frase A está correta.', dataCorreta: true},
@@ -55,20 +58,20 @@ require(['../wilib/js/lib/alternativa_botao_asterisco'], function (edi) {
 
     var textos = [
       [
-      {topico: 'A', texto: 'O Aedes aegypti geralmente vive em florestas e áreas rurais, com muitas plantações e poucas pessoas.'},
-      {topico: 'A', texto: 'O Aedes aegypti geralmente vive em áreas urbanas, principalmente em espaços com ocupação desordenada.'}
+      {topico: 'A', texto: 'O <span class="italico">Aedes aegypti</span> geralmente vive em florestas e áreas rurais, com muitas plantações e poucas pessoas.'},
+      {topico: 'B', texto: 'O <span class="italico">Aedes aegypti</span> geralmente vive em áreas urbanas, principalmente em espaços com ocupação desordenada.'}
       ],
       [
-      {topico: '', texto: 'O Aedes aegypti tem cor clara com manchas escuras.'},
-      {topico: '', texto: 'O Aedes aegypti tem cor escura com manchas claras.'}
+      {topico: 'A', texto: 'O <span class="italico">Aedes aegypti</span> tem cor clara com manchas escuras.'},
+      {topico: 'B', texto: 'O <span class="italico">Aedes aegypti</span> tem cor escura com manchas claras.'}
       ],
       [
-      {topico: '', texto: 'O Aedes aegypti só pica durante o dia.'},
-      {topico: '', texto: 'O Aedes aegypti só pica durante a noite.'}
+      {topico: 'A', texto: 'O <span class="italico">Aedes aegypti</span> só pica durante o dia.'},
+      {topico: 'B', texto: 'O <span class="italico">Aedes aegypti</span> só pica durante a noite.'}
       ],
       [
-      {topico: '', texto: 'O Aedes aegypti costuma picar durante o dia, mas também pode picar durante a noite.'},
-      {topico: '', texto: 'O Aedes aegypti costuma medir 7cm.'}
+      {topico: 'A', texto: 'O <span class="italico">Aedes aegypti</span> costuma picar durante o dia, mas também pode picar durante a noite.'},
+      {topico: 'B', texto: 'O <span class="italico">Aedes aegypti</span> costuma medir 7cm.'}
       ],
     ];
 
@@ -91,6 +94,11 @@ window.onload = function() {
     </script>
 
     <style>
+
+    .italico {
+      font-style: italic;
+    }
+
     </style>
 
   </head> 

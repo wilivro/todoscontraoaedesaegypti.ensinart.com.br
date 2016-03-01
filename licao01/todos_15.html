@@ -13,16 +13,17 @@
       require(['../wilib/js/lib/alternativa_vf'], function (edi) {
         
         edi.setConfig({
-              sexo: "M",
+        sexo: "M",
+        tempoFinal: 5,
         titulo: "Selecione <span id='negrito'>V</span> quando a alternativa for <span id='negrito'>Verdadeira</span> e <span id='negrito'>F</span>, quando for <span id='negrito'>Falsa</span>.",
         });
         
         var alternativas  = [];
         
         alternativas.push({
-          texto: 'Não é possível existir ovos do Aedes aegypti em uma caixa d’água vazia sem tampa.',
+          texto: 'Não é possível existir ovos do <span class="italico">Aedes aegypti</span> em uma caixa d’água vazia sem tampa.',
           dataCorreta: false,
-          fraseFinal: '<span id="fonte">Esta alternativa é falsa. Mesmo vazia, uma caixa d’água vazia sem tampa pode conter ovos do Aedes aegypti. Se houver ovos nas paredes do recipiente e a água da chuva voltar a enchê-lo, os ovos entram de novo no ciclo de vida e dentro de dias <br> se tornarão mosquitos adultos.</span>'
+          fraseFinal: '<span id="fonte">Esta alternativa é falsa. Mesmo vazia, uma caixa d’água vazia sem tampa pode conter ovos do <span class="italico">Aedes aegypti</span>. Se houver ovos nas paredes do recipiente e a água da chuva voltar a enchê-lo, os ovos entram de novo no ciclo de vida e dentro de dias <br> se tornarão mosquitos adultos.</span>'
         });
         
         alternativas.push({
@@ -31,9 +32,9 @@
         });
         
         alternativas.push({
-          texto: 'O Aedes aegypti não consegue voar em alturas mais altas do que 1,5 metros, por isso os moradores de apartamentos estão livres do mosquito em suas residências.',
+          texto: 'O <span class="italico">Aedes aegypti</span> não consegue voar em alturas mais altas do que 1,5 metros, por isso os moradores de apartamentos estão livres do mosquito em suas residências.',
           dataCorreta: false,
-          fraseFinal: '<span id="fonte">Esta alternativa é falsa. Apesar de não conseguir voar muito alto nem voar para longe, o Aedes aegypti pode estar nos andares mais altos dos prédios. Por incrível que pareça, o mosquito pode se locomover “pegando carona” dentro de objetos e até mesmo subir em um elevador, por isso o cuidado para evitar focos até mesmo em apartamentos é fundamental.</span>'
+          fraseFinal: '<span id="fonte">Esta alternativa é falsa. Apesar de não conseguir voar muito alto nem voar para longe, o <span class="italico">Aedes aegypti</span> pode estar nos andares mais altos dos prédios. Por incrível que pareça, o mosquito pode se locomover “pegando carona” dentro de objetos e até mesmo subir em um elevador, por isso o cuidado para evitar focos até mesmo em apartamentos é fundamental.</span>'
         });
         
         alternativas.push({
@@ -68,6 +69,10 @@
 
     #fonte {
       font-size: 14px;
+    }
+
+    .italico {
+      font-style: italic;
     }
 
     </style>

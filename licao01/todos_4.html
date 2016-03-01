@@ -15,6 +15,7 @@ require(['../wilib/js/lib/arrasta'], function (edi) {
   edi.setConfig({
     mascote: '',
     sexo: "M",
+    tempoFinal: 5,
     titulo: 'Arraste para o mosquito as doenças <br> que podem ser transmitidas pelo <span id="italic">Aedes aegypti</span>.'
   });
 
@@ -77,7 +78,9 @@ require(['../wilib/js/lib/arrasta'], function (edi) {
     $(b).parent().css({
       height: 'auto'
     });
-  }, null, config);
+  }, function() {
+    $('.alvo').remove();
+  }, config);
 
   $('.arrasta').css({
     margin: -5,
