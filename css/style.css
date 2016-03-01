@@ -27,12 +27,21 @@ time, mark, audio, video {
     src: local('Aller Display'), url('../fonts/AllerDisplay.woff') format('woff');
 }
 
+html, body {
+    height: 100%;
+}
+
+#wrapper{
+    min-height: 100%;
+    position: relative;
+}
+
 .topo {
     text-align:center;
     margin-right:auto; margin-left:auto; margin-top:-8px;
     background: #e8e7e3;
     font-family: 'Aller Display', sans-serif;
-    font-size: 75px;
+    font-size: 4.5vw;
     color: #3D4E5A;
     padding: 15px 20px 20px 0;$
 }
@@ -42,14 +51,14 @@ time, mark, audio, video {
     width: 100%;
     padding: 12px 0 12px 0;
     text-align:center;
-    position: fixed;
+    position: absolute;
     bottom: 0;
 }
 
 .meio2 {
     width: 100%;
     text-align:center;
-    position: fixed;
+    position: absolute;
     bottom: 0;
 }
 
@@ -73,6 +82,11 @@ time, mark, audio, video {
     margin-left:auto;
     text-align: center;
     margin-top: 10px;
+    padding-bottom: 375px;
+}
+
+.meio2>img {
+    width: 490px;
 }
 
 .btn {
