@@ -14,10 +14,10 @@
             </div>
             <div class="meio1">
                 <p>COLOQUE AQUI O CÓDIGO QUE ESTÁ NA PRIMEIRA PÁGINA DO LIVRO</p>
-                <input class="campo" tabindex="1" name="LoginForm[username]" id="LoginForm_username" type="text" maxlength="50" value=""/>
+                <input class="campo" id="campo" tabindex="1" name="LoginForm[username]" id="LoginForm_username" type="text" maxlength="50" value=""/>
             </div>
             <div class="meio3">
-                <button class="btn">ENTRAR</button>
+                <button class="btn" id="btn">ENTRAR</button>
             </div>
             <div class="meio2">
                 <img src="images/capa-01.png"/>
@@ -27,4 +27,43 @@
             </div>
         </div>
     </body>
+    <script language="javascript">
+
+var $ = function($) {
+    return document.getElementById($)
+};
+
+var btn = $('btn');
+var campo = $('campo');
+var tentativas = 0;
+
+var onClick = function () {
+
+    var val = campo.value.trim().toLowerCase();
+    if (val === "") {
+        return;
+    } else if (val === 'f4z3r0b3m') {
+        document.location = '/licao01/todos_1.html';
+    } else {
+        tentativas++;
+        campo.value = '';
+        if (tentativas < 3) {
+            alert('Código incorreto, por favor preste bastante atenção ao inserir o código, ele precisa estar exatamente igual ao informado no livro.');
+        } else if (tentativas < 6) {
+            alert('Identificamos um excesso de tentativas ao tentar inserir o código, caso você tenha o código em mãos e ainda sim está tendo alguma dificuldade, sugerimos que peça a ajuda de alguém para inserir o código corretamente.');
+        } else {
+            alert('Caso queira realizar o curso e não tenha um codigo por favor entre em contato com henri@wilivro.com.br e solicite uma senha.')
+        }
+    }
+    campo.focus();
+};
+
+btn.addEventListener("click", onClick);
+
+campo.addEventListener("keydown", function(e) {
+    if (e.keyCode === 13) {
+        onClick();
+    }
+});
+    </script>
 </html>
