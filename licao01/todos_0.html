@@ -9,14 +9,11 @@
     <link rel="stylesheet" href="../wilib/css/font-awesome.css">
     <link rel="stylesheet" href="../wilib/css/estilo.css">
 
-
-
-
-
-    <script>
+   <script>
 require(['../wilib/js/lib/edi'], function (edi) {
 
   edi.iniciar({
+    tempoFinal: 0,
     enunciado: false
   });
 
@@ -62,7 +59,7 @@ require(['../wilib/js/lib/edi'], function (edi) {
       $txt.fadeIn(
           setTimeout(function() {
             edi.finalizar();
-          },30000)
+          },3000)
           );
     },2000)
   }
