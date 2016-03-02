@@ -3,7 +3,7 @@
 <html lang="pt-br">
 
   <head>
-    <title>arr_b001</title>
+    <title>Todos contra o Aedes aegypti</title>
     <meta charset="utf-8">
     <script src="../wilib/js/lib/require.js"></script>
     <script src="../wilib/js/app.js"></script>
@@ -14,16 +14,16 @@
 require(['../wilib/js/lib/ligar'], function (edi) {
 
   edi.setConfig({
-    titulo: 'Qual é a sua principal missão no combate ao <span id="italico">Aedes aegypti</span>? <br> Arraste a bolinha e ligue as partes que completam cada frase:',
+    titulo: 'Qual é a sua principal missão no combate ao <span class="italico">Aedes aegypti</span>? <br> Arraste a bolinha e ligue as partes que completam cada frase:',
   });
 
   var ligas = [
   {
-    conteudo: 'Meu papel no combate ao Aedes aegypti é...',
+    conteudo: 'Meu papel no combate ao <span class="italico">Aedes aegypti</span> é...',
     dataCorreta: 0,
     cor: '#91CC63'
   }, {
-    conteudo: 'Meu papel no combate ao Aedes aegypti não é...',
+    conteudo: 'Meu papel no combate ao <span class="italico">Aedes aegypti</span> não é...',
     dataCorreta: 1,
     cor: '#0098FF'
   }
@@ -43,11 +43,7 @@ require(['../wilib/js/lib/ligar'], function (edi) {
     //b:elementoHTML = liga
     //c:elementoHTML = alvo
   }, function (a) {
-    if (a) {
-      $('#msgAcerto').fadeIn();
-    } else{
-      $('#msgErrado').fadeIn();
-    }
+  //
   }, {
     fontSize: 10,
     ligaFixo: false,
@@ -84,13 +80,13 @@ window.onload = function() {
     </script>
 
     <style>
-#conteudo {
-  background: radial-gradient(#fff, #fdfdfd);
-}
+      #conteudo {
+        background: radial-gradient(#fff, #fdfdfd);
+      }
 
-        #italico {
-          font-style: italic;
-        }
+      .italico {
+        font-style: italic;
+      }
 
     </style>
   </head>
