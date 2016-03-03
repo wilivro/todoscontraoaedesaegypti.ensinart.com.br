@@ -21,7 +21,7 @@
       });
 
   if (edi.telaAtual == 1) {
-    var texto = 'Você está doente, com <br> suspeita de dengue. <br> O que você deve fazer?';
+    var texto = 'Você está doente, com suspeita <br> de dengue. O que você deve fazer?';
 
     var btns = [
     {texto: 'Ficar totalmente isolado para não <br> transmitir a doença a outras pessoas. ', dataCorreta: false},
@@ -30,7 +30,7 @@
   }
 
   if (edi.telaAtual == 2) {
-    var texto = 'Você acaba de ver um vaso com água em sua casa com várias larvas do mosquito. <br> O que você deve fazer?';
+    var texto = 'Você acaba de ver um vaso com água <br> em sua casa com várias larvas do  <br>  mosquito. O que você deve fazer?';
 
     var btns = [
     {texto: 'Jogar as larvas na terra seca do jardim <br> ou chamar algum adulto para colocar água <br> sanitária na quantidade correta para  <br>  matar as larvas e depois lavar o vaso.', dataCorreta: true},
@@ -39,7 +39,7 @@
   }
 
   if (edi.telaAtual == 3) {
-    var texto = 'Você e sua família vão viajar nas  <br> férias por uma semana. <br> Antes de partir, o que vocês devem fazer?';
+    var texto = 'Você e sua família vão viajar nas férias  por uma semana. Antes de partir, o que vocês devem fazer?';
 
     var btns = [
     {texto: 'Verificar toda a casa retirando os <br>  objetos da área externa que podem  <br>  acumular água, deixar os ralos e os  <br>  vasos sanitários fechados.', dataCorreta: true},
@@ -83,7 +83,10 @@
 
   function callbackFinal(a) {
     if (edi.telaAtual == 4) {
-      if (a) barraMsg('Muito bem! Caso não seja possível localizar o responsável da casa, peça para entrarem em contato com a Ouvidoria de Saúde de sua cidade.', {height: 90})
+      if (a) {
+        barraMsg('Muito bem! Caso não seja possível localizar o responsável da casa, peça para entrarem em contato com a Ouvidoria de Saúde de sua cidade.',
+          {height: 90, top: 77});
+      }
     }
   }
 
@@ -98,7 +101,7 @@ window.onload = function() {
   parent = {
     bloqueio: function() {},
     seguir: function() {
-      document.location = '/';
+      document.location = document.URL.replace('todos_13', 'todos_14').split('?')[0];
     }
   }
 };
@@ -107,19 +110,19 @@ window.onload = function() {
     <style>
 
        .texto {
-          width: 370px;
+          width: 375px;
           height: 100px;
           padding: 0 20px;
           position: absolute;
-          left: 470px;
+          left: 460px;
           top: 80px;
           color: #666;
         }
 
         .texto p {
           margin: 10px 120px 0 0;
-          font-size: 12px;
-          text-align: center;
+          font-size: 13px;
+          text-align: justify;
           line-height: 1.3;
         }
 
@@ -130,7 +133,7 @@ window.onload = function() {
 
         #ico {
           position: absolute;
-          left: 414px;
+          left: 404px;
           top: 80px;
         }
 
