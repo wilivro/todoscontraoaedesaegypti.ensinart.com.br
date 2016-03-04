@@ -42,16 +42,17 @@ require(['../wilib/js/lib/alternativa_botao'], function (edi) {
 
   var config = {
     colunas: 1,
-    width: 580,
+    width: 620,
     height: 35,
-    left: 90,
+    left: 80,
     top: 80,
     margin: '12px 12px 0 12px',
     fontSize: 12,
     btnBranco: true,
     randomico: true,
     lineHeight: '1.4',
-    animacao: true
+    animacao: true,
+    fontWeight: 'normal',
   }
 
   edi.alternativa_botao(btns, null, null, config);
@@ -67,9 +68,9 @@ window.onload = function() {
     </script>
 
     <style>
-#sublinhado {
-  text-decoration: underline;
-}
+      #sublinhado {
+        text-decoration: underline;
+      }
     </style>
 
   </head>
