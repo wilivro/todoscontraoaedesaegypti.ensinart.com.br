@@ -46,12 +46,21 @@
 
 
       edi.memoria(carta, null , null, {
-      width: 85,
+      width: 103,
       top: 10,
-      height: 8
+      height: 26,
+      padding: 1
     });
 
  });
+  window.onload = function() {
+  parent = {
+    bloqueio: function() {},
+    seguir: function() {
+      document.location = document.URL.replace('todos_11', 'todos_12').split('?')[0];
+    }
+  }
+};
 
 
   </script>
