@@ -109,15 +109,5 @@ html, body {
 }
 
 .btn:hover {
-    height: 60px;
-    width: 30vw;
-    max-width: 300px;
-    font-size: 20px;
-    color: #fff;
-    cursor: pointer;
-    padding: 6px 12px;
     background: #1187b9;
-    border-radius: 0;
-    border: 1px solid #13a4e2;
-    font-family: 'Roboto', sans-serif;
 }
