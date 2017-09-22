@@ -14,7 +14,8 @@
     require(['../wilib/js/lib/edi'], function(edi) {
       edi.iniciar({
         icone: 'exclamacao',
-        titulo: 'Clique sobre as setas para se movimentar no local, <br>observe o mapa, e encontre o lixo jogado no terreno.'
+        titulo: 'Clique sobre as setas para se movimentar no local, <br>observe o mapa, e encontre o lixo jogado no terreno.',
+        sexo: "F"
       });
 
       var preloader = new edi.util.Preloader();
@@ -25,16 +26,19 @@
         {id:'garrafas', src: '../img/licao01/16/garrafas.svg'},
         {id:'garrafa1', src: '../img/licao01/16/garrafa1.svg'},
         {id:'garrafa2', src: '../img/licao01/16/garrafa2.svg'},
-        {id:'minimapa', src: '../img/licao01/16/minimapa.svg'},
+        {id:'minimapa', src: '../img/licao01/16/minimapa.svg'},      
+        {id:'caixa_', src: '../img/licao01/16/caixa_.svg'},
+        {id:'bacia_', src: '../img/licao01/16/bacia_.svg'},
+        {id:'garrafas_', src: '../img/licao01/16/garrafas_.svg'},
+        {id:'garrafa1_', src: '../img/licao01/16/garrafa1_.svg'},
+        {id:'garrafa2_', src: '../img/licao01/16/garrafa2_.svg'},
       ];
 
       preloader.createManifest(manifest);
       
       preloader.loadAll(function(){
         edi.util.removeLoading();
-      });
-
-      
+      });      
 
       var // elementos de navegacão
         $navConteudo = $('#nav-conteudo .inner'),
@@ -48,7 +52,6 @@
           x: -80,
           y: -80
         };
-
 
       $btns.click(clique);
 
@@ -90,27 +93,27 @@
 
         // tratando limites da view e ocultando botes de navegacão
         if (pos.y === 0) {
-          $('.botao#up').hide();
+          $('.botao#up').fadeOut();
         } else {
-          $('.botao#up').show();
+          $('.botao#up').fadeIn();
         }
 
         if (pos.x === -416) {
-          $('.botao#right').hide();
+          $('.botao#right').fadeOut();
         } else {
-          $('.botao#right').show();
+          $('.botao#right').fadeIn();
         }
 
         if (pos.y === -416) {
-          $('.botao#down').hide();
+          $('.botao#down').fadeOut();
         } else {
-          $('.botao#down').show();
+          $('.botao#down').fadeIn();
         }
 
         if (pos.x === 0) {
-          $('.botao#left').hide();
+          $('.botao#left').fadeOut();
         } else {
-          $('.botao#left').show();
+          $('.botao#left').fadeIn();
         }
       } // fim clique
 
@@ -246,12 +249,12 @@
 <body>
   <div id="revelas">
     <!-- Sombras -->
-    <img class="revela" data-revela="1" src="../img/licao01/16/caixa_.svg" style="top: 80px; width: 55px">
-    <img class="revela" data-revela="2" src="../img/licao01/16/37.2_.png" style="top: 169px">
-    <img class="revela" data-revela="3" src="../img/licao01/16/37.3_.png" style="top: 210px; left: 0px">
-    <img class="revela" data-revela="4" src="../img/licao01/16/37.4_.png" style="top: 285px">
-    <img class="revela" data-revela="5" src="../img/licao01/16/37.5_.png" style="top: 328px">
-    <img class="revela" data-revela="6" src="../img/licao01/16/37.6_.png" style="top: 160px; left: 80px">
+    <img class="revela" data-revela="1" src="../img/licao01/16/caixa_.svg" style="top: 295px; width: 105px;">
+    <img class="revela" data-revela="2" src="../img/licao01/16/garrafa1_.svg" style="top: 79px; left: 90px; width: 30px;">
+    <img class="revela" data-revela="3" src="../img/licao01/16/garrafa2_.svg" style="top: 83px; left: 10px; width: 45px;">
+    <img class="revela" data-revela="4" src="../img/licao01/16/garrafas_.svg" style="top: 170px; left: 75px; width: 70px;">
+    <img class="revela" data-revela="5" src="../img/licao01/16/bacia_.svg" style="top: 160px; left: 0; width: 70px;">
+    <img class="revela" data-revela="6" src="../img/licao01/16/pneu_.svg" style="top: 225px; left: 5px; width: 100px;">
   </div>
 
   <div id="navegacao">
@@ -267,12 +270,12 @@
         <div class="canvas"></div>
 
         <!-- Itens do mapa -->
-        <img class="alvo" data-revela="1" src="../img/licao01/16/caixa.svg" style="left: 145px; top: 80px; width: 30px">
-        <img class="alvo" data-revela="2" src="../img/licao01/16/garrafa1.svg" style="left: 340px; top: 10px">
-        <img class="alvo" data-revela="3" src="../img/licao01/16/garrafa2.svg" style="left: 80px; top: 220px">
-        <img class="alvo" data-revela="4" src="../img/licao01/16/garrafas.svg" style="left: 520px; top: 230px">
-        <img class="alvo" data-revela="5" src="../img/licao01/16/bacia.svg" style="left: 260px; top: 350px">
-        <img class="alvo" data-revela="6" src="../img/licao01/16/37.6.svg" style="left: 500px; top: 470px">
+        <img class="alvo" data-revela="2" src="../img/licao01/16/garrafa1.svg" style="left: 340px; top: 10px; width: 10px;">
+        <img class="alvo" data-revela="1" src="../img/licao01/16/caixa.svg" style="left: 145px; top: 80px; width: 30px;">
+        <img class="alvo" data-revela="3" src="../img/licao01/16/garrafa2.svg" style="left: 120px; top: 288px; width: 25px;">
+        <img class="alvo" data-revela="4" src="../img/licao01/16/garrafas.svg" style="left: 552px; top: 354px; width: 30px;">
+        <img class="alvo" data-revela="5" src="../img/licao01/16/bacia.svg" style="left: 303px; top: 527px; width: 36px;">
+        <img class="alvo" data-revela="6" src="../img/licao01/16/pneu.svg" style="left: 440px; top: 510px; width: 50px;">
       </div>
     </div>
   </div>

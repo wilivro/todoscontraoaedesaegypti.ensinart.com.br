@@ -1,16 +1,10 @@
-
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="234px" height="295px" viewBox="0 0 234 295">
-<defs>
-<g id="Layer0_0_FILL">
-<path fill="#999999" stroke="none" d="
-M 671.3 535.6
-L 671.3 343.2 633.05 353.35 633.05 292.6 472.75 292.6 472.75 353.05 471.5 353.25 436.95 344.4 436.95 534.35 471.5 529.4 471.5 588.55 633.05 588.55 633.05 529.4 671.3 535.6
-M 626.55 517.25
-L 625.85 516.05 625.85 515.95 626.55 517.25 Z"/>
-</g>
-</defs>
-
-<g transform="matrix( 1, 0, 0, 1, -436.95,-292.6) ">
-<use xlink:href="#Layer0_0_FILL"/>
-</g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 296 234.4" style="enable-background:new 0 0 296 234.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#999999;}
+</style>
+<path class="st0" d="M296,196.1l0-161.5h-59.1L241.8,0l-190,0l8.9,34.5l-0.2,1.3L0,35.8l0,160.3h60.4h0.3l-10.1,38.3l192.4,0
+	l-6.2-38.3L296,196.1z M223.4,188.9L223.4,188.9l1.3,0.7L223.4,188.9z"/>
 </svg>
