@@ -40,9 +40,6 @@ html, body {
     text-align:center;
     margin-right:auto; margin-left:auto; 
     background: #83b2b0;
-    font-family: 'Aller Display', sans-serif;
-    font-size: 4.5vw;
-    color: #fff;
     padding: 15px 20px 20px 0;$
 }
 
@@ -51,14 +48,15 @@ html, body {
     width: 100%;
     padding: 12px 0 12px 0;
     text-align:center;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
 .meio2 {
     width: 100%;
     text-align:center;
-    position: absolute;
+    position: relative;
+    display: block;
     bottom: 0;
 }
 
@@ -76,6 +74,8 @@ html, body {
     margin-right:auto; 
     margin-left:auto;
     text-align: center;
+    position: relative;
+    display: block;
 }
 
 .meio3 {
@@ -103,4 +103,10 @@ html, body {
     background: #13a4e2;
     border-radius: 0;
     border: 1px solid #13a4e2;
+}
+
+.frase-topo {
+    font-family: 'Aller Display', sans-serif;
+    font-size: 50px;
+    color: #fff;
 }
