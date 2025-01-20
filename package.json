@@ -1,5 +1,5 @@
 {
-  "name": "todoscontraoaedesaegypti.ensinarteditora.com.br",
+  "name": "cursos-todoscontraoaedesaegypti",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,20 +8,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wilivro/todoscontraoaedesaegypti.ensinarteditora.com.br.git"
+    "url": "git+https://github.com/wilivro/cursos.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wilivro/todoscontraoaedesaegypti.ensinarteditora.com.br/issues"
+    "url": "https://github.com/wilivro/cursos/issues"
   },
-  "homepage": "https://github.com/wilivro/todoscontraoaedesaegypti.ensinarteditora.com.br#readme",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-cssmin": "latest",
-    "grunt-contrib-htmlmin": "^0.6.0",
-    "grunt-contrib-imagemin": "latest",
-    "grunt-contrib-uglify": "latest",
-    "grunt-contrib-watch": "latest"
-  }
+  "homepage": "https://github.com/wilivro/cursos#readme",
+  "private": true
 }

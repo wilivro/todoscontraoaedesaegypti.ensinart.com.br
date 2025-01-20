@@ -15,29 +15,29 @@ require(['../wilib/js/lib/alternativa_botao'], function (edi) {
   edi.setConfig({
     sexo: "F",
     tempoFinal: 5,
-    titulo: "Selecione a única alternativa que apresenta <br> uma informação <span id='sublinhado'>errada</span> sobre a dengue."
+    titulo: "Selecione as duas alternativas que apresentam <br> apenas informações <span id='sublinhado'>corretas</span> sobre a dengue."
   });
 
   var btns = [];
 
   btns.push({
-    texto: "A dengue pode se manifestar de diferentes maneiras: na sua forma clássica, <br> como dengue hemorrágica, como síndrome de choque da dengue e até mesmo <br> de forma inaparente, onde não há sintoma algum.",
-    dataCorreta: false
+    texto: "A dengue pode se manifestar de diferentes maneiras. Algumas vezes a pessoa pode estar <br> infectada e não apresentar sintoma algum.",
+    dataCorreta: true
   });
 
   btns.push({
-    texto: "Há quatro subtipos do vírus da dengue. Portanto, a pessoa, <br> ao longo da sua vida, pode contrair a doença quatro vezes.",
+    texto: "Há quatro subtipos do vírus da dengue. Portanto, a pessoa, <br> ao longo da sua vida, pode contrair a doença, no máximo, quatro vezes.",
     dataCorreta: false
   });
 
   btns.push({
     texto: "Os primeiros sintomas da dengue começam a aparecer imediatamente após  <br>  a picada domosquito infectado. Neste momento é importante ficar isolado, pois  <br> uma pessoa pode rapidamente transmitir a doença para outra.",
-    dataCorreta: true
+    dataCorreta: false
   });
 
   btns.push({
     texto: "Se a pessoa contrair dengue pela segunda vez, a tendência é que seja mais grave.",
-    dataCorreta: false
+    dataCorreta: true
   });
 
   var config = {

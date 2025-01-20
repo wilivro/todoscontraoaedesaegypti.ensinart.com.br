@@ -1,1 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" width="777" height="346" viewBox="0 0 777 346"><defs><path fill="#FFF" d="M627.3-149.05q0-11.3-9.25-13.3-2.05-.45-4.55-.45h-749.05q-2.7 0-4.9.55-8.9 2.1-8.9 13.2V169q0 13.8 13.8 13.8H613.5q13.8 0 13.8-13.8v-318.05z" id="a"/><g id="d"><path fill="#8355A3" d="M-27.2 189.1L-131.8 76.7l-35.75-38.4v150.8H-27.2z"/><path fill="#793A70" d="M-89.9-38l2.1-5.75 46.3-126.9h-126.05V38.3l35.75 38.4L-89.9-38z"/><path fill="#8A5C8A" d="M61.75 81.1l57.85-92.8-207.4-32.05-2.1 5.75L61.75 81.1m573.6-251.75H172.5V189.1h462.85v-359.75z"/><path fill="#795179" d="M172.45 189.1l-3.05-23.5L61.75 81.1-89.9-38l-41.9 114.7 104.6 112.4h199.65z"/><path fill="#CB87CB" d="M125.65-170.65l16.05 123.4 27.7 212.85 3.05 23.5h.05v-359.75h-46.85z"/><path fill="#694669" d="M141.7-47.25L119.6-11.7 61.75 81.1l107.65 84.5-27.7-212.85z"/><path fill="#AF74AF" d="M119.6-11.7l22.1-35.55-16.05-123.4H-41.5l-46.3 126.9L119.6-11.7z"/></g><path id="c" stroke="#000" stroke-linejoin="round" stroke-linecap="round" fill="none" d="M176.95 209.45H-170V67.5h346.95v141.95z"/></defs><g transform="translate(149.55 163)"><mask id="b"><use xlink:href="#a"/></mask><g mask="url(#b)"><use xlink:href="#c"/><use xlink:href="#d"/></g></g></svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="777px" height="346px" viewBox="0 0 777 346">
+<defs>
+<g id="Mask_Background_mc_background_0_3_MASK_0_MEMBER_0_FILL">
+<path fill="#FFFFFF" stroke="none" d="
+M 627.3 -149.05
+Q 627.3 -160.35 618.05 -162.35 616 -162.8 613.5 -162.8
+L -135.55 -162.8
+Q -138.25 -162.8 -140.45 -162.25 -149.35 -160.15 -149.35 -149.05
+L -149.35 169
+Q -149.35 182.8 -135.55 182.8
+L 613.5 182.8
+Q 627.3 182.8 627.3 169
+L 627.3 -149.05 Z"/>
+</g>
+
+<g id="Background_mc_background_0_Layer3_1_FILL">
+<path fill="#8355A3" stroke="none" d="
+M -27.2 189.1
+L -131.8 76.7 -167.55 38.3 -167.55 189.1 -27.2 189.1 Z"/>
+
+<path fill="#793A70" stroke="none" d="
+M -89.9 -38
+L -87.8 -43.75 -41.5 -170.65 -167.55 -170.65 -167.55 38.3 -131.8 76.7 -89.9 -38 Z"/>
+
+<path fill="#8A5C8A" stroke="none" d="
+M 61.75 81.1
+L 119.6 -11.7 -87.8 -43.75 -89.9 -38 61.75 81.1
+M 635.35 -170.65
+L 172.5 -170.65 172.5 189.1 635.35 189.1 635.35 -170.65 Z"/>
+
+<path fill="#795179" stroke="none" d="
+M 172.45 189.1
+L 169.4 165.6 61.75 81.1 -89.9 -38 -131.8 76.7 -27.2 189.1 172.45 189.1 Z"/>
+
+<path fill="#CB87CB" stroke="none" d="
+M 125.65 -170.65
+L 141.7 -47.25 169.4 165.6 172.45 189.1 172.5 189.1 172.5 -170.65 125.65 -170.65 Z"/>
+
+<path fill="#694669" stroke="none" d="
+M 141.7 -47.25
+L 119.6 -11.7 61.75 81.1 169.4 165.6 141.7 -47.25 Z"/>
+
+<path fill="#AF74AF" stroke="none" d="
+M 119.6 -11.7
+L 141.7 -47.25 125.65 -170.65 -41.5 -170.65 -87.8 -43.75 119.6 -11.7 Z"/>
+</g>
+
+<path id="Background_mc_background_0_Layer3_0_1_STROKES" stroke="#000000" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" fill="none" d="
+M 176.95 209.45
+L -170 209.45 -170 67.5 176.95 67.5 176.95 209.45 Z"/>
+</defs>
+
+<g transform="matrix( 1, 0, 0, 1, 149.55,163) ">
+<mask id="Mask_Mask_1">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Mask_Background_mc_background_0_3_MASK_0_MEMBER_0_FILL"/>
+</g>
+</mask>
+
+<g mask="url(#Mask_Mask_1)">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Background_mc_background_0_Layer3_0_1_STROKES"/>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Background_mc_background_0_Layer3_1_FILL"/>
+</g>
+</g>
+
+<g mask="url(#Mask_Mask_1)"/>
+</g>
+</svg>

@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" width="31" height="52" viewBox="0 0 31 52"><defs><path d="M26.3 0l-7.55 37.2Q15.2 34 11.7 33.15q-3-.7-6.55 1.05-3.95 1.95-4.8 5.5-2.1 8.85 7.6 11.1 4.3 1.05 9.2-1.9 2.45-1.45 4-3.15l9-45.15L26.3 0z" id="a"/></defs><use xlink:href="#a"/></svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="31px" height="52px" viewBox="0 0 31 52">
+<defs>
+<g id="gr_nota05_0_Layer0_0_FILL">
+<path fill="#000000" stroke="none" d="
+M 26.3 0
+L 18.75 37.2
+Q 15.2 34 11.7 33.15 8.7 32.45 5.15 34.2 1.2 36.15 0.35 39.7 -1.75 48.55 7.95 50.8 12.25 51.85 17.15 48.9 19.6 47.45 21.15 45.75
+L 30.15 0.6 26.3 0 Z"/>
+</g>
+</defs>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#gr_nota05_0_Layer0_0_FILL"/>
+</g>
+</g>
+</svg>
