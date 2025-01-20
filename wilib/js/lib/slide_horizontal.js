@@ -1,1 +1,143 @@
-define(function(require){function _setConfig(opt){_configEDI=opt}function _init(slides,cb,cbfinal,opt){function handleLeftClick(){$(this);$page.animate({left:"+=778px"})}function handleRightClick(){var $self=$(this),$_slide=$self.closest(".slide");$page.animate({left:"-=778px"}),$(".btn-prev, .btn-next").off(),edi.regressiva(config.tempoBloqueia,"para clicar no próximo botao!",function(){$_slide.hasClass("show")||($_slide.addClass("show"),peca.objetivos.unshift(1),edi.objetivos.unshift(1),peca.objetivos.pop(),edi.objetivos.pop(),edi.finalizar({mostrarResultado:!1}),cb&&cb(),$(".show").length===peca.objetivos.length&&cbfinal&&cbfinal()),$(".btn-prev").click(handleLeftClick),$(".btn-next").click(handleRightClick)})}edi.iniciar(_configEDI);var peca=this,config={tempoBloqueia:1e3};if($.extend(config,opt),!slides)return console.error("[slides] é um parâmetro obrigatório!");slides.forEach(function(slide,i){i!=slides.length-1&&(peca.objetivos.push(0),edi.objetivos.push(0))});var $slideHorizontal=$("<div>").attr({id:"slide-horizontal","data-edi":"slide-horizontal"}).appendTo("#conteudo"),$page=$("<div>").attr("id","page").css("width",788*slides.length).appendTo($slideHorizontal);return slides.forEach(function(slide,i){var $slide=$("<div>").addClass("slide").attr("id",i).appendTo($page),$btnPrev=$("<div>").addClass("button btn-prev").css({cursor:"pointer"}).html('<i class="fa fa-chevron-left">');0!==i&&$btnPrev.appendTo($slide).click(handleLeftClick);var $btnNext=($("<div>").addClass("container").html(slide).appendTo($slide),$("<div>").addClass("button btn-next").css({cursor:"pointer"}).html('<i class="fa fa-chevron-right">'));i!==slides.length-1&&$btnNext.appendTo($slide).click(handleRightClick)}),ARR_TAREFAS[tarefaSlide].resolve(),{objetivos:peca.objetivos,finalizar:edi.finalizar({mostrarResultado:!1})}}var tarefaSlide=addTarefa(),edi=require("../lib/edi"),_configEDI=null;return{objetivos:[],regressiva:edi.regressiva,setConfig:_setConfig,slide_horizontal:_init}});
+define(function (require) {
+  var tarefaSlide = addTarefa(),
+    edi = require('../lib/edi'),
+    _configEDI = null;
+
+  // setando as configurações do edi
+  function _setConfig(opt) {
+    _configEDI = opt;
+  }
+
+  // método principal
+  function _init(slides, cb, cbfinal, opt) {
+    edi.iniciar(_configEDI);
+    var peca = this;
+
+    // configurações
+    var config = {
+      tempoBloqueia: 1000
+    };
+
+    $.extend(config, opt);
+
+    if (!slides)
+      return console.error('[slides] é um parâmetro obrigatório!');
+
+    // adicionando objetivos
+    slides.forEach(function (slide, i) {
+      if (i == slides.length - 1)
+        return;
+
+      peca.objetivos.push(0);
+      edi.objetivos.push(0);
+    });
+
+    // container principal
+    var $slideHorizontal = $('<div>').attr({
+      'id': 'slide-horizontal',
+      'data-edi': 'slide-horizontal'
+    }).appendTo('#conteudo');
+
+    // container dos slides
+    var $page = $('<div>')
+      .attr('id', 'page')
+      .css('width', slides.length * 788)
+      .appendTo($slideHorizontal);
+
+    // montando os lides
+    slides.forEach(function (slide, i) {
+      var $slide = $('<div>')
+        .addClass('slide')
+        .attr('id', i)
+        .appendTo($page);
+
+      // botão retroceder
+      var $btnPrev = $('<div>')
+        .addClass('button btn-prev')
+        .css({cursor: 'pointer'})
+        .html('<i class="fa fa-chevron-left">');
+
+      // não adiciona o botao no primeiro slide
+      if (i !== 0) {
+        $btnPrev
+          .appendTo($slide)
+          .click(handleLeftClick);
+      }
+
+      // conteudo do slide
+      var $container = $('<div>')
+        .addClass('container')
+        .html(slide)
+        .appendTo($slide);
+
+      // botao avançar
+      var $btnNext = $('<div>')
+        .addClass('button btn-next')
+        .css({cursor: 'pointer'})
+        .html('<i class="fa fa-chevron-right">');
+
+      // não adiciona botao 'prox' ao ultimo slide
+      if (i !== (slides.length - 1)) {
+        $btnNext
+          .appendTo($slide)
+          .click(handleRightClick);
+      }
+    });
+
+    function handleLeftClick() {
+      var $self = $(this);
+      $page.animate({left: '+=778px'});
+    }
+
+    function handleRightClick() {
+      var $self = $(this),
+        $_slide = $self.closest('.slide');
+
+      $page.animate({left: '-=778px'});
+
+      $('.btn-prev, .btn-next').off();
+
+      edi.regressiva(config.tempoBloqueia, 'para clicar no próximo botao!', function () {
+
+        // condição para não chamar o edi.finalizar
+        // mais de uma vêz no mesmo botao
+        if (!$_slide.hasClass('show')) {
+          $_slide.addClass('show');
+
+          peca.objetivos.unshift(1);
+          edi.objetivos.unshift(1);
+
+          peca.objetivos.pop();
+          edi.objetivos.pop();
+
+          edi.finalizar({mostrarResultado: false});
+
+          // chamando callback
+          if (cb)
+            cb();
+
+          // chamando callback final
+          if ($('.show').length === peca.objetivos.length)
+            if(!!cbfinal)cbfinal();
+
+        }
+        $('.btn-prev').click(handleLeftClick);
+        $('.btn-next').click(handleRightClick);
+      });
+    }
+
+    ARR_TAREFAS[tarefaSlide].resolve();
+
+    return {
+      objetivos: peca.objetivos,
+      finalizar: edi.finalizar({mostrarResultado: false})
+    };
+  } //
+
+  return {
+    objetivos: [],
+    regressiva: edi.regressiva,
+    setConfig: _setConfig,
+    slide_horizontal: _init
+  };
+});
