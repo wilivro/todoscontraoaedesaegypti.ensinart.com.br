@@ -206,5 +206,33 @@
   }
   
   window.addEventListener("load", initMenuActive);
+
+  /**
+   * Control login student
+   */
+  const btnLoginStudent = document.querySelector('#btn-login-student');
+  const inputLoginStudent = document.querySelector('#input-login-student');
+  let tentativas = 0;
+  function ClickLoginStudent () {
+    var val = inputLoginStudent.value.trim().toLowerCase();
+    if (val === "") {
+        return;
+    } else if (val === 'f4z3r0b3m') {
+        document.location = 'licao01/todos_0.html';
+    } else {
+        tentativas++;
+        inputLoginStudent.value = '';
+        if (tentativas < 3) {
+            alert('Código incorreto, por favor preste bastante atenção ao inserir o código, ele precisa estar exatamente igual ao informado no livro.');
+        } else if (tentativas < 6) {
+            alert('Identificamos um excesso de tentativas ao tentar inserir o código, caso você tenha o código em mãos e ainda sim está tendo alguma dificuldade, sugerimos que peça a ajuda de alguém para inserir o código corretamente.');
+        } else {
+            alert('Caso queira realizar o curso e não tenha um codigo por favor entre em contato com henri@wilivro.com.br e solicite uma senha.')
+        }
+    }
+    campo.focus();
+  }
+
+  btnLoginStudent.addEventListener("click", ClickLoginStudent);
 })();
 
