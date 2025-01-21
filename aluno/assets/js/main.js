@@ -218,7 +218,7 @@
     if (val === "") {
         return;
     } else if (val === 'f4z3r0b3m') {
-        document.location = 'licao01/todos_0.html';
+        document.location = '../../../licao01/todos_0.html';
     } else {
         tentativas++;
         inputLoginStudent.value = '';

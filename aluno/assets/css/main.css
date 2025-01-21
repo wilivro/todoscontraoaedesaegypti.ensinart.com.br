@@ -896,6 +896,7 @@ section,
   border: 2px solid var(--surface-color);
   width: 800px;
   height: 70px;
+  text-align: center;
 }
 
 #student button {
@@ -981,20 +982,24 @@ section,
   padding-left: 30px;
 }
 
+#teacher form .d-flex a,
 #teacher form .d-flex button {
   height: 50px;
   padding: 0 30px;
   border-radius: 30px;
   border: none;
   font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#teacher form .d-flex button:first-child {
+#teacher form .d-flex button {
   background-color: var(--accent-color);
   color: var(--surface-color);
 }
 
-#teacher form .d-flex button:last-child {
+#teacher form .d-flex a {
   background-color: var(--background-color);
   color: var(--default-color);
 }
