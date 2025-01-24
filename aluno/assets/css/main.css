@@ -531,11 +531,48 @@ section,
   transform: scale(0.5);
 }
 
+#locale .container-image a {
+  position: absolute;
+  width: 18%;
+  height: 18%;
+}
+
+#locale .container-image a > div {
+  margin-top: -50px;
+}
+#locale .container-image a img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+#locale img {
+  display: block; width: 100%; height: auto;
+}
 #locale .pernambuco {
   position: absolute;
   top: 100px;
   right: -120px;
   font-size: 3em;
+}
+
+#locale a.a-acre {
+  left: -4.85%;
+  top: 28.75%;
+  height: 33%;
+}
+
+#locale a.a-acre > div {
+  margin-top: 0;
+}
+
+#locale .a-alagoas {
+  left: 81.5%;
+  top: 44.2%;
+}
+
+#locale .a-pernambuco {
+  left: 85%;
+  top: 8.5%;
 }
 
 #locale .alagoas {
@@ -545,12 +582,14 @@ section,
   font-size: 3em;
 }
 
-#locale .acre .bg-title{
+#locale .a-acre .bg-title{
   font-size: 4rem;
   height: 70px;
   padding-top: 0;
   line-height: 55px;
   margin-top: -20px;
+  display: inline-table;
+  max-width: 0;
 }
 #locale .acre {
   position: absolute;
@@ -640,6 +679,12 @@ section,
 
 .section-title p {
   margin-bottom: 0;
+}
+
+@media (max-width: 911px) {
+  #locale .aedes-container {
+    flex-direction: column;
+  }
 }
 
 /*--------------------------------------------------------------
