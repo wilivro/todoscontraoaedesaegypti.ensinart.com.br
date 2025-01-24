@@ -685,6 +685,13 @@ section,
   #locale .aedes-container {
     flex-direction: column;
   }
+  #locale .a-acre .d-flex {
+    align-items: start !important;
+  }
+  #locale .a-pernambuco .d-flex,
+  #locale .a-alagoas .d-flex {
+    align-items: end !important;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -920,6 +927,10 @@ section,
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  
+  #locale .todos-contra {
+    text-align: center !important;
   }
   
   #locale .bg-title {
