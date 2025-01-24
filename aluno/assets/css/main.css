@@ -527,12 +527,86 @@ section,
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
-.aedes-container .aedes {
+.scale-05 {
+  transform: scale(0.5);
+}
+
+#locale .pernambuco {
+  position: absolute;
+  top: 100px;
+  right: -120px;
+  font-size: 3em;
+}
+
+#locale .alagoas {
+  position: absolute;
+  top: 410px;
+  right: -5px;
+  font-size: 3em;
+}
+
+#locale .acre .bg-title{
+  font-size: 4rem;
+  height: 70px;
+  padding-top: 0;
+  line-height: 55px;
+  margin-top: -20px;
+}
+#locale .acre {
+  position: absolute;
+  top: 310px;
+  left: -5px;
+  font-size: 3em;
+}
+
+#locale #acre,
+#locale #alagoas,
+#locale #pernambuco {
+  position: absolute;
+  top: -100px;
+}
+
+.pulsar {
+  animation: pulsar 1s infinite alternate;
+}
+
+@keyframes pulsar {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Sombra inicial */
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); /* Sombra expandida */
+  }
+}
+
+.texto-com-borda-grossa {
+    text-shadow:
+        0 0 3px var(--background-color),
+        -1px 0 3px var(--background-color), 1px 0 3px var(--background-color),
+        0 -1px 3px var(--background-color), 0 1px 3px var(--background-color),
+        -1px -1px 3px var(--background-color), 1px -1px 3px var(--background-color),
+        -1px 1px 3px var(--background-color), 1px 1px 3px var(--background-color),
+
+        0 0 6px var(--background-color),
+        -2px 0 6px var(--background-color), 2px 0 6px var(--background-color),
+        0 -2px 6px var(--background-color), 0 2px 6px var(--background-color),
+        -2px -2px 6px var(--background-color), 2px -2px 6px var(--background-color),
+        -2px 2px 6px var(--background-color), 2px 2px 6px var(--background-color),
+
+        0 0 9px var(--background-color),
+        -3px 0 9px var(--background-color), 3px 0 9px var(--background-color),
+        0 -3px 9px var(--background-color), 0 3px 9px var(--background-color),
+        -3px -3px 9px var(--background-color), 3px -3px 9px var(--background-color),
+        -3px 3px 9px var(--background-color), 3px 3px 9px var(--background-color);
+}
+
+.aedes {
   width: 150px;
   height: 150px;
   background-image: url(../img/todos-contra-aedes-aegypti.png);
   background-position: 0 100%;
   background-size: cover;
+  border-radius: 100%;
 }
 
 
